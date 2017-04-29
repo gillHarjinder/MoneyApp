@@ -20,6 +20,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func CreateCatogories(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "CREATE", sender: self)
+    }
 
+    @IBAction func addExpances(_ sender: Any) {
+        self.performSegue(withIdentifier: "ADD_EXPANSE", sender: self)
+    }
 }
 
