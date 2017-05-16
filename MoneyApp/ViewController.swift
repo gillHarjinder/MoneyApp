@@ -119,9 +119,11 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
         if(hasCategory) {
             self.performSegue(withIdentifier: "ADD_EXPANSE", sender: self)
         } else {
-            let alert = UIAlertController(title: "", message: "Message", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            let alertController = UIAlertController(title: "No categories found", message:
+                "You must add a category first", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            
+            self.present(alertController, animated: true, completion: nil)
         }
     }
 }
