@@ -22,6 +22,7 @@
 		E5FD9E771ECB761D0052412E /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E761ECB761D0052412E /* ListController.swift */; };
 		E5FD9E791ECB762E0052412E /* CreateCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E781ECB762E0052412E /* CreateCategoryController.swift */; };
 		E5FD9E7B1ECB76410052412E /* CreateMoneyValueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E7A1ECB76410052412E /* CreateMoneyValueController.swift */; };
+		E5FD9E7D1ECB8B550052412E /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E7C1ECB8B550052412E /* CustomNavigationBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E5FD9E761ECB761D0052412E /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		E5FD9E781ECB762E0052412E /* CreateCategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCategoryController.swift; sourceTree = "<group>"; };
 		E5FD9E7A1ECB76410052412E /* CreateMoneyValueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMoneyValueController.swift; sourceTree = "<group>"; };
+		E5FD9E7C1ECB8B550052412E /* CustomNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				E5FD9E721ECB6FE50052412E /* MoneyValueCell.swift */,
 				E5FD9E741ECB74450052412E /* RoundedButton.swift */,
+				E5FD9E7C1ECB8B550052412E /* CustomNavigationBar.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				E5FD9E6C1ECB6D940052412E /* Categories+CoreDataProperties.swift in Sources */,
 				E5FD9E6E1ECB6D940052412E /* MoneyValue+CoreDataProperties.swift in Sources */,
 				E5FD9E7B1ECB76410052412E /* CreateMoneyValueController.swift in Sources */,
+				E5FD9E7D1ECB8B550052412E /* CustomNavigationBar.swift in Sources */,
 				E5489EED1EB515C200BA7F60 /* AppDelegate.swift in Sources */,
 				E5FD9E751ECB74450052412E /* RoundedButton.swift in Sources */,
 				E5FD9E731ECB6FE50052412E /* MoneyValueCell.swift in Sources */,
