@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="stc-tl-pyp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="stc-tl-pyp">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -60,6 +60,9 @@
                                     <color key="titleColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Ul3-uQ-gIe" kind="show" id="Xsr-Di-8Bo"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$9200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ7-tX-o2O" userLabel="Green_Total_Income">
                                 <rect key="frame" x="30" y="163" width="315" height="100"/>
@@ -107,7 +110,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="stc-tl-pyp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" misplaced="YES" id="IG2-kN-pSC">
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" id="IG2-kN-pSC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.27058823529999998" green="0.43529411759999997" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -121,6 +124,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xpT-jd-caQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1300" y="-1654"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tfN-Zx-qb2">
+            <objects>
+                <viewController id="Ul3-uQ-gIe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="llY-tO-m5t"/>
+                        <viewControllerLayoutGuide type="bottom" id="1ct-B0-yd6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="k8P-Pu-1T1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ss-sl-qBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1077" y="-789"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gHK-mj-2qf">
@@ -184,7 +205,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f0-Hm-Fd2">
                                 <rect key="frame" x="36" y="560" width="303" height="60"/>
-                                <color key="backgroundColor" red="0.68624029799999997" green="1" blue="0.91136410899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.43137254899999999" green="0.57254901960000004" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="dMg-dP-AjS"/>
                                 </constraints>
@@ -193,7 +214,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Hej-t5-b3j" firstAttribute="top" secondItem="jng-ah-OR2" secondAttribute="bottom" constant="70" id="Ctw-K0-xPc"/>
                             <constraint firstItem="bHn-dc-T7J" firstAttribute="leading" secondItem="Iqi-wu-kQ6" secondAttribute="leadingMargin" constant="9" id="D9Q-If-MiD"/>
@@ -277,7 +298,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKP-8C-Ify">
                                 <rect key="frame" x="26" y="570" width="323" height="60"/>
-                                <color key="backgroundColor" red="0.68624029799999997" green="1" blue="0.91136410899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.43137254899999999" green="0.57254901960000004" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="KZJ-lx-9Kc"/>
                                 </constraints>
