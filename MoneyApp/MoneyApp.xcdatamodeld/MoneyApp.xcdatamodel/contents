@@ -7,13 +7,13 @@
     <entity name="MoneyValue" representedClassName=".MoneyValue" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="reacuring" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MoneyValue" positionX="-63" positionY="-18" width="128" height="135"/>
         <element name="Categories" positionX="-54" positionY="-9" width="128" height="75"/>
+        <element name="MoneyValue" positionX="-63" positionY="-18" width="128" height="135"/>
     </elements>
 </model>

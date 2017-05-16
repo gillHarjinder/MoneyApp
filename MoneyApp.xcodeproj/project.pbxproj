@@ -18,6 +18,10 @@
 		E5FD9E6D1ECB6D940052412E /* MoneyValue+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E691ECB6D940052412E /* MoneyValue+CoreDataClass.swift */; };
 		E5FD9E6E1ECB6D940052412E /* MoneyValue+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E6A1ECB6D940052412E /* MoneyValue+CoreDataProperties.swift */; };
 		E5FD9E731ECB6FE50052412E /* MoneyValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E721ECB6FE50052412E /* MoneyValueCell.swift */; };
+		E5FD9E751ECB74450052412E /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E741ECB74450052412E /* RoundedButton.swift */; };
+		E5FD9E771ECB761D0052412E /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E761ECB761D0052412E /* ListController.swift */; };
+		E5FD9E791ECB762E0052412E /* CreateCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E781ECB762E0052412E /* CreateCategoryController.swift */; };
+		E5FD9E7B1ECB76410052412E /* CreateMoneyValueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E7A1ECB76410052412E /* CreateMoneyValueController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		E5FD9E691ECB6D940052412E /* MoneyValue+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MoneyValue+CoreDataClass.swift"; path = "../MoneyValue+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E5FD9E6A1ECB6D940052412E /* MoneyValue+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MoneyValue+CoreDataProperties.swift"; path = "../MoneyValue+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E5FD9E721ECB6FE50052412E /* MoneyValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyValueCell.swift; sourceTree = "<group>"; };
+		E5FD9E741ECB74450052412E /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		E5FD9E761ECB761D0052412E /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		E5FD9E781ECB762E0052412E /* CreateCategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateCategoryController.swift; sourceTree = "<group>"; };
+		E5FD9E7A1ECB76410052412E /* CreateMoneyValueController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMoneyValueController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				E5FD9E721ECB6FE50052412E /* MoneyValueCell.swift */,
+				E5FD9E741ECB74450052412E /* RoundedButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -110,6 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				E5489EEE1EB515C200BA7F60 /* ViewController.swift */,
+				E5FD9E761ECB761D0052412E /* ListController.swift */,
+				E5FD9E781ECB762E0052412E /* CreateCategoryController.swift */,
+				E5FD9E7A1ECB76410052412E /* CreateMoneyValueController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -188,12 +200,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5489EEF1EB515C200BA7F60 /* ViewController.swift in Sources */,
+				E5FD9E771ECB761D0052412E /* ListController.swift in Sources */,
 				E5FD9E6C1ECB6D940052412E /* Categories+CoreDataProperties.swift in Sources */,
 				E5FD9E6E1ECB6D940052412E /* MoneyValue+CoreDataProperties.swift in Sources */,
+				E5FD9E7B1ECB76410052412E /* CreateMoneyValueController.swift in Sources */,
 				E5489EED1EB515C200BA7F60 /* AppDelegate.swift in Sources */,
+				E5FD9E751ECB74450052412E /* RoundedButton.swift in Sources */,
 				E5FD9E731ECB6FE50052412E /* MoneyValueCell.swift in Sources */,
 				E5489EF51EB515C200BA7F60 /* MoneyApp.xcdatamodeld in Sources */,
 				E5FD9E6D1ECB6D940052412E /* MoneyValue+CoreDataClass.swift in Sources */,
+				E5FD9E791ECB762E0052412E /* CreateCategoryController.swift in Sources */,
 				E5FD9E6B1ECB6D940052412E /* Categories+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

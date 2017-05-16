@@ -19,7 +19,7 @@ extension MoneyValue {
     @NSManaged public var category: String?
     @NSManaged public var type: Bool
     @NSManaged public var reacuring: Bool
-    @NSManaged public var desc: String?
+    @NSManaged public var date: String?
     @NSManaged public var name: String?
     @NSManaged public var amount: Double
 
