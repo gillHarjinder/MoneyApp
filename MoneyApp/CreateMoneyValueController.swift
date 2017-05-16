@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class CreateMoneyValueController: UIViewController {
+class CreateMoneyValueController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var expenseIncomeSegment: UISegmentedControl!
     @IBOutlet weak var nameInput: UITextField!
@@ -16,19 +17,64 @@ class CreateMoneyValueController: UIViewController {
     @IBOutlet weak var categoryPicker: UIPickerView!
     @IBOutlet weak var reacuringTypeSegment: UISegmentedControl!
     
+    var categoryController: NSFetchedResultsController<Categories>!
+    var allCategories = [Categories]()
+    var selectedCategory = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.categoryPicker.dataSource = self;
+        self.categoryPicker.delegate = self;
         var _ = ad.saveContext()
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CreateMoneyValueController.dismissKeyboard)))
+        categoryController = NSFetchedResultsController<Categories>()
+        attemptFetchCategories()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    func attemptFetchCategories() {
+        let fetchRequest: NSFetchRequest<Categories> = Categories.fetchRequest()
+        let nameSort = NSSortDescriptor(key: "name", ascending: false)
+        fetchRequest.sortDescriptors = [nameSort]
+        if let results = try? context.fetch(fetchRequest) {
+            if results.count != 0 {
+                for obj in results {
+                    allCategories.append(obj)
+                }
+            }
+        }
+        let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        self.categoryController = controller
+        do {
+            try controller.performFetch()
+        } catch {
+            print("Could not fetch")
+        }
+    }
+    
     func dismissKeyboard() {
         nameInput.resignFirstResponder()
         amountInput.resignFirstResponder()
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return allCategories[row].name
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return allCategories.count
+        
+    }
+    
+    func pickerView(pickerView: UIPickerView!, didSelectRow row: Int, inComponent component: Int) {
+        selectedCategory = allCategories[row].name!
     }
     
     func saveCard() {
@@ -49,10 +95,14 @@ class CreateMoneyValueController: UIViewController {
         default:
             break;
         }
+        if(nameInput.text == nil) {
+            nameInput.text = ""
+        }
         card.name = nameInput.text
         if(amountInput.text == nil) {
             amountInput.text = "0.00"
         }
+        card.category = selectedCategory
         card.amount = Double(amountInput.text!)!
         let date = NSDate()
         let dateFormatter = DateFormatter()
