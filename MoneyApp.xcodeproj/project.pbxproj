@@ -13,6 +13,11 @@
 		E5489EF51EB515C200BA7F60 /* MoneyApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5489EF31EB515C200BA7F60 /* MoneyApp.xcdatamodeld */; };
 		E5489EF71EB515C200BA7F60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5489EF61EB515C200BA7F60 /* Assets.xcassets */; };
 		E5489EFA1EB515C200BA7F60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5489EF81EB515C200BA7F60 /* LaunchScreen.storyboard */; };
+		E5FD9E6B1ECB6D940052412E /* Categories+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E671ECB6D940052412E /* Categories+CoreDataClass.swift */; };
+		E5FD9E6C1ECB6D940052412E /* Categories+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E681ECB6D940052412E /* Categories+CoreDataProperties.swift */; };
+		E5FD9E6D1ECB6D940052412E /* MoneyValue+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E691ECB6D940052412E /* MoneyValue+CoreDataClass.swift */; };
+		E5FD9E6E1ECB6D940052412E /* MoneyValue+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E6A1ECB6D940052412E /* MoneyValue+CoreDataProperties.swift */; };
+		E5FD9E731ECB6FE50052412E /* MoneyValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FD9E721ECB6FE50052412E /* MoneyValueCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		E5489EF61EB515C200BA7F60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5489EF91EB515C200BA7F60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5489EFB1EB515C200BA7F60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5FD9E671ECB6D940052412E /* Categories+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Categories+CoreDataClass.swift"; path = "../Categories+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E5FD9E681ECB6D940052412E /* Categories+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Categories+CoreDataProperties.swift"; path = "../Categories+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E5FD9E691ECB6D940052412E /* MoneyValue+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MoneyValue+CoreDataClass.swift"; path = "../MoneyValue+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E5FD9E6A1ECB6D940052412E /* MoneyValue+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "MoneyValue+CoreDataProperties.swift"; path = "../MoneyValue+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E5FD9E721ECB6FE50052412E /* MoneyValueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoneyValueCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +66,10 @@
 		E5489EEB1EB515C200BA7F60 /* MoneyApp */ = {
 			isa = PBXGroup;
 			children = (
+				E5FD9E711ECB6ED20052412E /* Controller */,
+				E5FD9E701ECB6ECD0052412E /* View */,
+				E5FD9E5E1ECB6CBD0052412E /* Model */,
 				E5489EEC1EB515C200BA7F60 /* AppDelegate.swift */,
-				E5489EEE1EB515C200BA7F60 /* ViewController.swift */,
 				E5489EF01EB515C200BA7F60 /* Main.storyboard */,
 				E5489EF61EB515C200BA7F60 /* Assets.xcassets */,
 				E5489EF81EB515C200BA7F60 /* LaunchScreen.storyboard */,
@@ -65,6 +77,41 @@
 				E5489EF31EB515C200BA7F60 /* MoneyApp.xcdatamodeld */,
 			);
 			path = MoneyApp;
+			sourceTree = "<group>";
+		};
+		E5FD9E5E1ECB6CBD0052412E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5FD9E6F1ECB6DDA0052412E /* Generated */,
+				E5FD9E691ECB6D940052412E /* MoneyValue+CoreDataClass.swift */,
+				E5FD9E671ECB6D940052412E /* Categories+CoreDataClass.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E5FD9E6F1ECB6DDA0052412E /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				E5FD9E681ECB6D940052412E /* Categories+CoreDataProperties.swift */,
+				E5FD9E6A1ECB6D940052412E /* MoneyValue+CoreDataProperties.swift */,
+			);
+			name = Generated;
+			sourceTree = "<group>";
+		};
+		E5FD9E701ECB6ECD0052412E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5FD9E721ECB6FE50052412E /* MoneyValueCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E5FD9E711ECB6ED20052412E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E5489EEE1EB515C200BA7F60 /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,8 +188,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5489EEF1EB515C200BA7F60 /* ViewController.swift in Sources */,
+				E5FD9E6C1ECB6D940052412E /* Categories+CoreDataProperties.swift in Sources */,
+				E5FD9E6E1ECB6D940052412E /* MoneyValue+CoreDataProperties.swift in Sources */,
 				E5489EED1EB515C200BA7F60 /* AppDelegate.swift in Sources */,
+				E5FD9E731ECB6FE50052412E /* MoneyValueCell.swift in Sources */,
 				E5489EF51EB515C200BA7F60 /* MoneyApp.xcdatamodeld in Sources */,
+				E5FD9E6D1ECB6D940052412E /* MoneyValue+CoreDataClass.swift in Sources */,
+				E5FD9E6B1ECB6D940052412E /* Categories+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +358,7 @@
 				E5489F001EB515C200BA7F60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
