@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="height" constant="60" id="NGo-bk-CqU"/>
                                 </constraints>
                                 <state key="normal" title="ADD EXPANSE">
-                                    <color key="titleColor" red="0.98744140349999998" green="0.98337671039999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="60" id="0KG-l1-n4G"/>
                                 </constraints>
                                 <state key="normal" title="CREATE CATEGORIES">
-                                    <color key="titleColor" red="0.98744140349999998" green="0.98337671039999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
@@ -57,7 +57,7 @@
                                     <constraint firstAttribute="height" constant="60" id="08s-hV-zu2"/>
                                 </constraints>
                                 <state key="normal" title="Expenses">
-                                    <color key="titleColor" red="0.98744140349999998" green="0.98337671039999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                             </button>
@@ -111,7 +111,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.27058823529999998" green="0.43529411759999997" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.84313725490196079" green="0.81176470588235294" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.74841564959999995" green="0.72098738330000001" blue="0.69919481819999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -238,6 +238,7 @@
                                     <segment title="Expanses"/>
                                     <segment title="Income"/>
                                 </segments>
+                                <color key="tintColor" red="0.74841564957201157" green="0.72098738325294653" blue="0.69919481816413864" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEJ-ZF-Hgp">
                                 <rect key="frame" x="26" y="139" width="323" height="100"/>
@@ -308,7 +309,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="AKP-8C-Ify" firstAttribute="leading" secondItem="wP2-jB-UnD" secondAttribute="leadingMargin" constant="10" id="7Dy-Vn-NWy"/>
                             <constraint firstItem="wzt-Yk-Ncf" firstAttribute="top" secondItem="5Dm-LR-Ad4" secondAttribute="bottom" constant="8" id="7ic-PW-VIm"/>
