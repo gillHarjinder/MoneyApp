@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Summary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MoneyApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,8 +95,9 @@
                             <constraint firstItem="jep-TC-geH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="zU4-Od-vle"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Kld-Hl-BVB"/>
+                    <navigationItem key="navigationItem" title="Summary" id="Kld-Hl-BVB"/>
                     <connections>
+                        <outlet property="incomeLabel" destination="JJ7-tX-o2O" id="3aJ-Ek-DcZ"/>
                         <outlet property="posNegLabel" destination="JJ7-tX-o2O" id="j3G-Nn-Xmf"/>
                         <segue destination="nB6-et-TPZ" kind="show" identifier="CREATE" id="2Dx-lA-uq8"/>
                         <segue destination="DDW-nG-ArK" kind="show" identifier="ADD_EXPANSE" id="Wdk-UU-hWw"/>
@@ -106,12 +107,12 @@
             </objects>
             <point key="canvasLocation" x="573.60000000000002" y="-1306.5967016491754"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Custom Navigation Bar-->
         <scene sceneID="Fzb-l8-2np">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="stc-tl-pyp" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="stc-tl-pyp" customClass="CustomNavigationBar" customModule="MoneyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" misplaced="YES" id="IG2-kN-pSC">
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" id="IG2-kN-pSC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.27058823529999998" green="0.43529411759999997" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -127,7 +128,7 @@
             </objects>
             <point key="canvasLocation" x="-1300" y="-1654"/>
         </scene>
-        <!--List Controller-->
+        <!--List-->
         <scene sceneID="tfN-Zx-qb2">
             <objects>
                 <viewController id="Ul3-uQ-gIe" customClass="ListController" customModule="MoneyApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -152,7 +153,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PBN-J6-hqq">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MoneyValueCell" id="PBN-J6-hqq">
                                         <rect key="frame" x="14" y="0.0" width="311" height="187"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -302,12 +303,16 @@
                             <constraint firstItem="S6h-lv-6tU" firstAttribute="leading" secondItem="k8P-Pu-1T1" secondAttribute="leading" constant="18" id="ajk-qj-spl"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="List" id="zQ5-sO-dF9"/>
+                    <connections>
+                        <outlet property="listCollectionView" destination="S6h-lv-6tU" id="SzH-dZ-aeB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ss-sl-qBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-250" y="-421"/>
         </scene>
-        <!--Create Category Controller-->
+        <!--Create Category-->
         <scene sceneID="gHK-mj-2qf">
             <objects>
                 <viewController id="nB6-et-TPZ" customClass="CreateCategoryController" customModule="MoneyApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -367,13 +372,13 @@
                                 <color key="textColor" red="0.27058823529999998" green="0.43529411759999997" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f0-Hm-Fd2" customClass="RoundedButton" customModule="MoneyApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f0-Hm-Fd2" customClass="RoundedButton" customModule="MoneyApp" customModuleProvider="target">
                                 <rect key="frame" x="36" y="560" width="303" height="60"/>
                                 <color key="backgroundColor" red="0.43137254899999999" green="0.57254901960000004" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="dMg-dP-AjS"/>
                                 </constraints>
-                                <state key="normal" title="ADD">
+                                <state key="normal" image="addSingle">
                                     <color key="titleColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
@@ -397,12 +402,13 @@
                             <constraint firstItem="jng-ah-OR2" firstAttribute="top" secondItem="eGP-et-IiW" secondAttribute="bottom" constant="30" id="wUu-Yb-nbP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Create Category" id="Ver-oJ-Ftm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVW-Zg-PZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="574" y="-421"/>
         </scene>
-        <!--Create Money Value Controller-->
+        <!--Add-->
         <scene sceneID="Sdn-X6-1JF">
             <objects>
                 <viewController id="DDW-nG-ArK" customClass="CreateMoneyValueController" customModule="MoneyApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -435,16 +441,17 @@
                                 <color key="textColor" red="0.27058823529999998" green="0.43529411759999997" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKP-8C-Ify" customClass="RoundedButton" customModule="MoneyApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKP-8C-Ify" customClass="RoundedButton" customModule="MoneyApp" customModuleProvider="target">
                                 <rect key="frame" x="26" y="570" width="323" height="60"/>
                                 <color key="backgroundColor" red="0.43137254899999999" green="0.57254901960000004" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="KZJ-lx-9Kc"/>
                                 </constraints>
-                                <state key="normal" title="ADD">
+                                <state key="normal" image="addSingle">
                                     <color key="titleColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="addButtonPressed:" destination="DDW-nG-ArK" eventType="touchUpInside" id="ns5-Ve-6Sr"/>
                                     <action selector="addExpances:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQR-es-FlX"/>
                                 </connections>
                             </button>
@@ -532,6 +539,14 @@
                             <constraint firstItem="rma-XA-sEs" firstAttribute="leading" secondItem="wP2-jB-UnD" secondAttribute="leadingMargin" constant="9" id="zcG-dl-cXS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Add" id="GFn-II-pVk"/>
+                    <connections>
+                        <outlet property="amountInput" destination="7Ud-6B-XYq" id="rmf-AC-HoH"/>
+                        <outlet property="categoryPicker" destination="rma-XA-sEs" id="Z5z-Kf-khf"/>
+                        <outlet property="expenseIncomeSegment" destination="Ii6-6I-sdd" id="8KT-aF-PpZ"/>
+                        <outlet property="nameInput" destination="jok-gB-0wm" id="hNO-1P-W0f"/>
+                        <outlet property="reacuringTypeSegment" destination="zIi-Jh-Ooj" id="x3p-TU-T2Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEK-JN-X0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
