@@ -34,10 +34,10 @@ class CreateCategoryController: UIViewController {
     func saveCat() {
         let cat = Categories(context: context)
         if nameTextFeild.text == nil {
-            nameTextFeild.text = ""
+            nameTextFeild.text = " "
         }
         if descriptionTexField.text == nil {
-            descriptionTexField.text = ""
+            descriptionTexField.text = " "
         }
         cat.name = nameTextFeild.text
         cat.desc = descriptionTexField.text

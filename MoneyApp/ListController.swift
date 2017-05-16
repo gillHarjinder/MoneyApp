@@ -18,6 +18,8 @@ class ListController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        listCollectionView.delegate = self
+        listCollectionView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,7 +84,6 @@ class ListController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
             break
         }
-        
     }
     
     func configureCell(cell: MoneyValueCell, indexPath: NSIndexPath) {
@@ -101,8 +102,7 @@ class ListController: UIViewController, UICollectionViewDelegate, UICollectionVi
         } catch {
             print("Could not fetch")
         }
-        
-        // Only show values in this month? Maybe make a segment switcher that switches between this month and then all past cells
+        listCollectionView.reloadData()
     }
     
     

@@ -16,7 +16,7 @@ class MoneyValueCell: UICollectionViewCell {
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var reacuringImage: UIImageView!
     var repeatImage = UIImage(named: "repeat")
-    var singleImage = UIImage(named: "once")
+    var singleImage = UIImage(named: "single")
     
     var positiveColor = UIColor(red: 166/256, green: 190/256, blue: 152/256, alpha: 1.0)
     var negativeColor = UIColor(red: 160/256, green: 26/256, blue: 29/256, alpha: 1.0)
@@ -28,17 +28,22 @@ class MoneyValueCell: UICollectionViewCell {
     }
     
     func configureCell(card: MoneyValue) {
-        switch (card.type) {
-        case(false):
-            self.backgroundColor = negativeColor
-            break
-        case(true):
+        var type = card.type
+        if(type) {
             self.backgroundColor = positiveColor
-            break
+        } else {
+            self.backgroundColor = negativeColor
         }
-        name.text = card.name
-        date.text = card.date
-        amount.text = String(card.amount)
+        if let cardName = card.name {
+            name.text = cardName
+        }
+        if let cardDate = card.date {
+            date.text = cardDate
+        }
+        let numberFormatter = NumberFormatter()
+        numberFormatter.minimumFractionDigits = 2
+        numberFormatter.maximumFractionDigits = 2
+        amount.text = "$" + numberFormatter.string(from: NSNumber(floatLiteral: card.amount))!
         category.text = card.category
         if(card.reacuring) {
             reacuringImage.image = repeatImage

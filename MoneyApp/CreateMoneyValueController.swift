@@ -20,6 +20,8 @@ class CreateMoneyValueController: UIViewController, UIPickerViewDataSource, UIPi
     var categoryController: NSFetchedResultsController<Categories>!
     var allCategories = [Categories]()
     var selectedCategory = String()
+    var isReacurring = Bool(false)
+    var isExpense = Bool(false)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +55,7 @@ class CreateMoneyValueController: UIViewController, UIPickerViewDataSource, UIPi
         } catch {
             print("Could not fetch")
         }
+        categoryPicker.reloadAllComponents()
     }
     
     func dismissKeyboard() {
@@ -60,7 +63,7 @@ class CreateMoneyValueController: UIViewController, UIPickerViewDataSource, UIPi
         amountInput.resignFirstResponder()
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return allCategories[row].name
     }
     
@@ -81,26 +84,34 @@ class CreateMoneyValueController: UIViewController, UIPickerViewDataSource, UIPi
         let card = MoneyValue(context: context)
         switch expenseIncomeSegment.selectedSegmentIndex {
         case 0:
-            card.type = false
+            card.type = isExpense
+            break
         case 1:
-            card.type = true
+            card.type = !isExpense
+            break
         default:
-            break;
+            card.type = !isExpense
+            break
         }
         switch reacuringTypeSegment.selectedSegmentIndex {
         case 0:
-            card.reacuring = false
+            card.reacuring = isReacurring
         case 1:
-            card.reacuring = true
+            card.reacuring = !isReacurring
         default:
             break;
         }
         if(nameInput.text == nil) {
-            nameInput.text = ""
+            nameInput.text = " "
         }
-        card.name = nameInput.text
+        let cardName: String? = nameInput.text
+        card.name = cardName
         if(amountInput.text == nil) {
             amountInput.text = "0.00"
+        }
+        let cardAmount: String? = amountInput.text
+        if selectedCategory == "" {
+            selectedCategory = allCategories[0].name!
         }
         card.category = selectedCategory
         card.amount = Double(amountInput.text!)!
@@ -117,6 +128,8 @@ class CreateMoneyValueController: UIViewController, UIPickerViewDataSource, UIPi
     
     @IBAction func addButtonPressed(_ sender: Any) {
         saveCard()
+        var mainViewController: ViewController = ViewController(nibName: nil, bundle: nil)
+        mainViewController.didAlreadyLoad = false
         let _ = navigationController?.popViewController(animated: true)
     }
 

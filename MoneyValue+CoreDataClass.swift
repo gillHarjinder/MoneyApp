@@ -9,7 +9,6 @@
 import Foundation
 import CoreData
 
-@objc(MoneyValue)
 public class MoneyValue: NSManagedObject {
 
 }

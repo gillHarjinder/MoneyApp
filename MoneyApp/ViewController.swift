@@ -44,6 +44,7 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
     }
     
     func countExpense() {
+        totalIncome = 0.0
         for card in allCards {
             if(card.type) {
                 totalIncome += card.amount
@@ -67,6 +68,7 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
     }
     
     func attemptFetchMoneyValues() {
+        allCards.removeAll()
         let fetchRequest: NSFetchRequest<MoneyValue> = MoneyValue.fetchRequest()
         let dateSort = NSSortDescriptor(key: "date", ascending: false)
         fetchRequest.sortDescriptors = [dateSort]
@@ -77,7 +79,9 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
                 }
             }
         }
-        countExpense()
+        if !didAlreadyLoad {
+            countExpense()
+        }
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         self.moneyValueController = controller
         do {
@@ -88,6 +92,7 @@ class ViewController: UIViewController, NSFetchedResultsControllerDelegate {
     }
     
     func attemptFetchCategories() {
+        allCategories.removeAll()
         let fetchRequest: NSFetchRequest<Categories> = Categories.fetchRequest()
         let nameSort = NSSortDescriptor(key: "name", ascending: false)
         fetchRequest.sortDescriptors = [nameSort]
