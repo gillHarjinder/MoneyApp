@@ -425,12 +425,6 @@
                                 </segments>
                                 <color key="tintColor" red="0.74841564957201157" green="0.72098738325294653" blue="0.69919481816413864" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </segmentedControl>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rma-XA-sEs">
-                                <rect key="frame" x="0.0" y="261" width="375" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="f9N-fq-AFl"/>
-                                </constraints>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzt-Yk-Ncf">
                                 <rect key="frame" x="11" y="215" width="15" height="30"/>
                                 <constraints>
@@ -497,7 +491,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zIi-Jh-Ooj">
                                 <rect key="frame" x="69" y="369" width="237" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="NJh-5M-Pmc"/>
+                                    <constraint firstAttribute="height" constant="30" id="RvD-If-5Jz"/>
                                 </constraints>
                                 <segments>
                                     <segment title="One-Time"/>
@@ -505,37 +499,43 @@
                                 </segments>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </segmentedControl>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rma-XA-sEs">
+                                <rect key="frame" x="25" y="261" width="325" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="6rm-Mt-z4S"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="7Ud-6B-XYq" firstAttribute="leading" secondItem="wP2-jB-UnD" secondAttribute="leadingMargin" constant="9" id="0uZ-i1-NnH"/>
+                            <constraint firstItem="rma-XA-sEs" firstAttribute="top" secondItem="7Ud-6B-XYq" secondAttribute="bottom" constant="19" id="5hO-00-ck1"/>
                             <constraint firstItem="6ou-bH-X94" firstAttribute="leading" secondItem="wP2-jB-UnD" secondAttribute="leadingMargin" constant="10" id="6TG-Oz-olQ"/>
                             <constraint firstItem="AKP-8C-Ify" firstAttribute="leading" secondItem="wP2-jB-UnD" secondAttribute="leadingMargin" constant="10" id="7Dy-Vn-NWy"/>
                             <constraint firstItem="Ii6-6I-sdd" firstAttribute="leading" secondItem="wP2-jB-UnD" secondAttribute="leadingMargin" constant="9" id="8Jb-7R-vbf"/>
                             <constraint firstItem="Ii6-6I-sdd" firstAttribute="top" secondItem="rtp-xU-ZEv" secondAttribute="bottom" constant="20" id="BWf-xk-E6V"/>
-                            <constraint firstAttribute="trailing" secondItem="rma-XA-sEs" secondAttribute="trailing" id="CLX-xD-ixp"/>
                             <constraint firstItem="7Ud-6B-XYq" firstAttribute="top" secondItem="5Dm-LR-Ad4" secondAttribute="bottom" constant="8" id="Dco-W2-lNB"/>
-                            <constraint firstItem="rma-XA-sEs" firstAttribute="top" secondItem="wzt-Yk-Ncf" secondAttribute="bottom" constant="16" id="KFQ-Hf-Uqk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ii6-6I-sdd" secondAttribute="trailing" constant="9" id="O31-N0-BHc"/>
                             <constraint firstItem="5Dm-LR-Ad4" firstAttribute="top" secondItem="jok-gB-0wm" secondAttribute="bottom" constant="8" id="Rv7-u4-vsk"/>
-                            <constraint firstItem="zIi-Jh-Ooj" firstAttribute="top" secondItem="rma-XA-sEs" secondAttribute="bottom" constant="8" id="TKD-zl-zVX"/>
                             <constraint firstItem="jok-gB-0wm" firstAttribute="leading" secondItem="wP2-jB-UnD" secondAttribute="leadingMargin" constant="9" id="UWY-65-0S1"/>
-                            <constraint firstItem="rma-XA-sEs" firstAttribute="leading" secondItem="wP2-jB-UnD" secondAttribute="leading" id="WzA-yg-avO"/>
+                            <constraint firstItem="zIi-Jh-Ooj" firstAttribute="top" secondItem="rma-XA-sEs" secondAttribute="bottom" constant="8" id="V4h-7I-6Ti"/>
                             <constraint firstItem="gqn-Ps-YFW" firstAttribute="top" secondItem="AKP-8C-Ify" secondAttribute="bottom" constant="37" id="XzZ-fy-iFo"/>
                             <constraint firstItem="wzt-Yk-Ncf" firstAttribute="top" secondItem="rtp-xU-ZEv" secondAttribute="bottom" constant="151" id="ZsK-H4-Xpi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rma-XA-sEs" secondAttribute="trailing" constant="9" id="daR-MU-uUH"/>
                             <constraint firstItem="5Dm-LR-Ad4" firstAttribute="leading" secondItem="wP2-jB-UnD" secondAttribute="leadingMargin" constant="10" id="gm8-eM-4dV"/>
                             <constraint firstItem="6ou-bH-X94" firstAttribute="top" secondItem="Ii6-6I-sdd" secondAttribute="bottom" constant="8" id="goz-Pp-Hdd"/>
                             <constraint firstItem="jok-gB-0wm" firstAttribute="top" secondItem="6ou-bH-X94" secondAttribute="bottom" constant="8" id="h5I-Oh-HpJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zIi-Jh-Ooj" secondAttribute="trailing" constant="53" id="ijy-yP-8sX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zIi-Jh-Ooj" secondAttribute="trailing" constant="53" id="iKD-Mv-eGy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AKP-8C-Ify" secondAttribute="trailing" constant="10" id="jxY-7Q-BA2"/>
+                            <constraint firstItem="zIi-Jh-Ooj" firstAttribute="leading" secondItem="wP2-jB-UnD" secondAttribute="leadingMargin" constant="53" id="nls-DD-2ya"/>
                             <constraint firstItem="wzt-Yk-Ncf" firstAttribute="leading" secondItem="wP2-jB-UnD" secondAttribute="leading" constant="11" id="tc8-xs-13Y"/>
-                            <constraint firstItem="zIi-Jh-Ooj" firstAttribute="leading" secondItem="wP2-jB-UnD" secondAttribute="leadingMargin" constant="53" id="ziK-VW-OeT"/>
+                            <constraint firstItem="rma-XA-sEs" firstAttribute="leading" secondItem="wP2-jB-UnD" secondAttribute="leadingMargin" constant="9" id="zcG-dl-cXS"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEK-JN-X0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1410" y="-421"/>
+            <point key="canvasLocation" x="1408.8" y="-421.43928035982015"/>
         </scene>
     </scenes>
     <resources>
