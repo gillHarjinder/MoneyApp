@@ -381,6 +381,9 @@
                                 <state key="normal" image="addSingle">
                                     <color key="titleColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="makeCategory:" destination="nB6-et-TPZ" eventType="touchUpInside" id="vD8-zu-NXa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.96470588239999999" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -403,6 +406,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Category" id="Ver-oJ-Ftm"/>
+                    <connections>
+                        <outlet property="descriptionTexField" destination="bHn-dc-T7J" id="KyH-gn-G2e"/>
+                        <outlet property="nameTextFeild" destination="Hej-t5-b3j" id="vqn-zB-gv9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BVW-Zg-PZ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
