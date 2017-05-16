@@ -22,32 +22,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ7-tX-o2O" userLabel="Green_Total_Income">
-                                <rect key="frame" x="30" y="84" width="315" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="2zQ-WI-DUQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2N-kl-9oI" userLabel="Red_Total_expense">
-                                <rect key="frame" x="30" y="204" width="315" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="X53-dP-kS1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trM-jf-CtJ">
                                 <rect key="frame" x="36" y="573" width="303" height="60"/>
-                                <color key="backgroundColor" red="0.68624029799999997" green="1" blue="0.91136410899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.43137254899999999" green="0.57254901960000004" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="NGo-bk-CqU"/>
                                 </constraints>
                                 <state key="normal" title="ADD EXPANSE">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.98744140349999998" green="0.98337671039999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="addExpances:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g48-NB-M0q"/>
@@ -55,39 +38,62 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jep-TC-geH">
                                 <rect key="frame" x="36" y="482" width="303" height="60"/>
-                                <color key="backgroundColor" red="0.68624029801885988" green="1" blue="0.9113641090475707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.43137254899999999" green="0.57254901960000004" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="0KG-l1-n4G"/>
                                 </constraints>
                                 <state key="normal" title="CREATE CATEGORIES">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.98744140349999998" green="0.98337671039999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="CreateCatogories:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ud-Bq-f0Y"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T97-df-8pV">
+                                <rect key="frame" x="36" y="391" width="303" height="60"/>
+                                <color key="backgroundColor" red="0.43137254899999999" green="0.57254901960000004" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="08s-hV-zu2"/>
+                                </constraints>
+                                <state key="normal" title="Expenses">
+                                    <color key="titleColor" red="0.98744140349999998" green="0.98337671039999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$9200" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJ7-tX-o2O" userLabel="Green_Total_Income">
+                                <rect key="frame" x="30" y="163" width="315" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Znk-iZ-rIv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.98431372549019602" green="0.96470588235294119" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="trM-jf-CtJ" secondAttribute="trailing" constant="20" id="0r6-Rk-IZh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="trM-jf-CtJ" secondAttribute="bottom" constant="34" id="1L2-39-1TL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JJ7-tX-o2O" secondAttribute="trailing" constant="14" id="4ay-k7-jSw"/>
                             <constraint firstItem="trM-jf-CtJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="5z2-dg-4a4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="trM-jf-CtJ" secondAttribute="trailing" constant="20" id="DPL-JH-meL"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="k2N-kl-9oI" secondAttribute="trailing" constant="14" id="Dgq-2a-v7K"/>
-                            <constraint firstItem="k2N-kl-9oI" firstAttribute="top" secondItem="JJ7-tX-o2O" secondAttribute="bottom" constant="20" id="Erh-YQ-bC7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T97-df-8pV" secondAttribute="trailing" constant="20" id="DbA-ml-XXc"/>
                             <constraint firstItem="trM-jf-CtJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="FUq-4m-WBI"/>
-                            <constraint firstItem="k2N-kl-9oI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="Gk5-B2-Irl"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="trM-jf-CtJ" secondAttribute="bottom" constant="34" id="L9I-a9-ZtE"/>
-                            <constraint firstItem="JJ7-tX-o2O" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="QIp-NK-I6A"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JJ7-tX-o2O" secondAttribute="trailing" constant="14" id="T75-Vg-luT"/>
-                            <constraint firstItem="JJ7-tX-o2O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="XPm-Ck-s5V"/>
+                            <constraint firstItem="JJ7-tX-o2O" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="99" id="hsD-jf-ThH"/>
                             <constraint firstItem="trM-jf-CtJ" firstAttribute="top" secondItem="jep-TC-geH" secondAttribute="bottom" constant="31" id="nxb-8h-W9Y"/>
+                            <constraint firstItem="JJ7-tX-o2O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="14" id="quC-EC-WpH"/>
+                            <constraint firstItem="T97-df-8pV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="sJo-MD-iUv"/>
+                            <constraint firstItem="jep-TC-geH" firstAttribute="top" secondItem="T97-df-8pV" secondAttribute="bottom" constant="31" id="usd-yf-fhg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jep-TC-geH" secondAttribute="trailing" constant="20" id="xNW-Jf-7ZY"/>
                             <constraint firstItem="jep-TC-geH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="zU4-Od-vle"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Kld-Hl-BVB"/>
                     <connections>
+                        <outlet property="posNegLabel" destination="JJ7-tX-o2O" id="j3G-Nn-Xmf"/>
                         <segue destination="nB6-et-TPZ" kind="show" identifier="CREATE" id="2Dx-lA-uq8"/>
                         <segue destination="DDW-nG-ArK" kind="show" identifier="ADD_EXPANSE" id="Wdk-UU-hWw"/>
                     </connections>
@@ -101,9 +107,11 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="stc-tl-pyp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IG2-kN-pSC">
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" misplaced="YES" id="IG2-kN-pSC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.27058823529999998" green="0.43529411759999997" blue="0.58431372550000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.84313725490196079" green="0.81176470588235294" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -228,7 +236,7 @@
                                 </constraints>
                                 <segments>
                                     <segment title="Expanses"/>
-                                    <segment title="Second"/>
+                                    <segment title="Income"/>
                                 </segments>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEJ-ZF-Hgp">
@@ -327,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEK-JN-X0Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1224.8" y="-421.43928035982015"/>
+            <point key="canvasLocation" x="1206" y="-435"/>
         </scene>
     </scenes>
 </document>

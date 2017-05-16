@@ -10,8 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var posNegLabel: UILabel!
+    
+    var positiveColor = UIColor(red: 166/256, green: 190/256, blue: 152/256, alpha: 1.0)
+    var negativeColor = UIColor(red: 160/256, green: 26/256, blue: 29/256, alpha: 1.0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        posNegLabel.textColor = positiveColor
         // Do any additional setup after loading the view, typically from a nib.
     }
 
